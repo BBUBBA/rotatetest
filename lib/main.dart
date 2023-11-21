@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _rotate = 0;
 
   void _rotate1() {
     SystemChrome.setPreferredOrientations([
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       DeviceOrientation.landscapeRight,
     ]);
     setState(() {
-      _counter = 1;
+      _rotate = 1;
     });
   }
 
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       DeviceOrientation.portraitDown,
     ]);
     setState(() {
-      _counter = 1;
+      _rotate = 2;
     });
   }
 
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       DeviceOrientation.landscapeLeft,
     ]);
     setState(() {
-      _counter = 1;
+      _rotate = 3;
     });
   }
 
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Rotate Mode',
             ),
             Text(
-              '$_counter',
+              '$_rotate',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Row(
